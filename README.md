@@ -1,2 +1,3 @@
 # EC2_jupyter_notebook
-# f
+
+Start a jupyter notebook on EC2 server
