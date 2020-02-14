@@ -73,7 +73,13 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/server_stop.PNG)
 
 
-Conclusion
+# Conclusion
+Always remember to stop your EC2 servers to avoid accumulating charges. You can always check how much it is going to cost for different isntances over here: https://aws.amazon.com/ec2/pricing/on-demand/
+
+So once you stop you EC2 instances, you wont be charged anymore but the EBS volumes that are attached to the EC2 instance still persist unless you manually delete them or checked 'Delete on Termination' when creating EC2 instance. But honestly EBS volumes are dirt cheap which start at $0.10 per GB-month of provisioned storage for General Purpose SSD (gp2) Volumes. That means even if you use 2 EBS volumes with 30 GB storage each running for 100 hours in month its going to cost just $0.8 USD. For calculations and pricing of EBS volumes refer here: https://aws.amazon.com/ebs/pricing/
+
+The reason for keeping the EBS volumes is to avoid installing the anaconda environment all over on the new volume.
+
 
 
 
