@@ -19,7 +19,7 @@ session= get_session('insert region name here')
 ec2 = session.resource('ec2')
 instance = ec2.Instance('insert instance id here')
 pprint.pprint(instance.start())
-countdown(50)
+countdown(30)
 pprint.pprint(instance.state)
 dns_name = instance.public_dns_name
 ip = instance.public_ip_address
