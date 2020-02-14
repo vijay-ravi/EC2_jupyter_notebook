@@ -4,11 +4,12 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 
 # Pre-requisites:
 1. AWS Account
-2. Python environment (Download python 3.8.1 from www.python.org)
+2. Python environment (Download python 3.7.4 from www.python.org)
 3. Key-Pair file
 4. EC2 server
- have to add pip install boto3 and pip install awscli / aws config/access keys
-# Instructions:
+
+Note: If you havent set up your AWS account, installed boto3, awscli please refer to the article on my <website>: 
+ have to add pip install boto3 and pip install awscli / aws config/access key
 
 # 1. Download ec2_start.py and ec2_stop.py files and save to working directory of your local command line. For example, mine is C:\Users\Vijay.
 
@@ -47,8 +48,8 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/ssh_1.PNG)
 
 
-# 9. Download anaconda on your server using command: wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh. If EC2 instance is micro then download miniconda: wget https://repo.anaconda.com/miniconda/Miniconda2-4.7.12.1-Linux-x86_64.sh
-Refer https://repo.anaconda.com/archive and https://repo.anaconda.com/miniconda for relevant OS.
+# 9. Download anaconda on your server using command: wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh. If EC2 instance is micro then download miniconda: wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+Refer https://repo.anaconda.com/archive and https://repo.anaconda.com/miniconda for relevant OS and python versions.
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/get_anaconda.PNG)
 
@@ -72,7 +73,7 @@ Refer https://repo.anaconda.com/archive and https://repo.anaconda.com/miniconda 
 
 # 13. Now the fun stuff. After all that hard work, the next time you wanna start a server I will give you two lines of codes to achieve it. It will start a server and launch a jupyter notebook.
 
-
+# 15
 # 14. Open up your command prompt and type the code:   python ec2_start.py  (This command assumes that you have the .pem file stored in working directory)
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/jupyter_cmd.PNG)
