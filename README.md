@@ -8,7 +8,7 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 3. Key-Pair file
 4. EC2 server
 
-Note: If you havent set up your AWS account, installed boto3, awscli please refer to the article on my <website>: 
+<b>Note: If you havent set up your AWS account or installed boto3 and awscli please refer to the article on my website: www.vijayravi.blog
  have to add pip install boto3 and pip install awscli / aws config/access key
 
 # 1. Download ec2_start.py and ec2_stop.py files and save to working directory of your local command line. For example, mine is C:\Users\Vijay.
@@ -17,6 +17,7 @@ Note: If you havent set up your AWS account, installed boto3, awscli please refe
 
 
 # 2. Login to your AWS account and select a region of your choice
+![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/region.PNG)
 
 # 3. Create a key-pair file with .pem format and save the .pem file to to the working directory of your local command line.
 
@@ -48,7 +49,7 @@ Note: If you havent set up your AWS account, installed boto3, awscli please refe
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/ssh_1.PNG)
 
 
-# 9. Download anaconda on your server using command: wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh. If EC2 instance is micro then download miniconda: wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+# 9. Download anaconda on your server using command: wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh. You can also download miniconda environment if you want a minimal environmment: wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 Refer https://repo.anaconda.com/archive and https://repo.anaconda.com/miniconda for relevant OS and python versions.
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/get_anaconda.PNG)
