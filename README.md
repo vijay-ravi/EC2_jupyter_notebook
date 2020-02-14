@@ -30,35 +30,47 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/security_group.PNG)
 
+
 # 6. After your instance launches, copy the 'Instance ID' to clipboard. We will need it while editing python files.
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/ec2_server.PNG)
+
 
 # 7. Open up the ec2_start.py and ec2_stop.py files in any standard text editor (I use Atom. Atom rocks!) and paste the 'Instance ID' in the specified area. Also fill up the region name and .pem file name.
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/code_edit.PNG)
 
-# 8. Next step is to ssh into your ec2 server. Make sure the .pem file is in working directory of the command line Use the code: ssh -i <insert .pem key file> ec2-user@ insert public dns name
+
+# 8. Next step is to ssh into your ec2 server. Make sure the .pem file is in working directory of the command line Use the code: ssh -i #   insert .pem keyfile ec2-user@ insert public dns name
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/ssh_1.PNG)
 
-# 9. Download anaconda on your server using command: wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+
+# 9. Download anaconda on your server using command: wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh. If EC2 instance is micro then download miniconda: wget https://repo.anaconda.com/miniconda/Miniconda2-4.7.12.1-Linux-x86_64.sh
+Refer https://repo.anaconda.com/archive and https://repo.anaconda.com/miniconda for relevant OS.
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/get_anaconda.PNG)
+
 
 # 10. Install using command: bash Anaconda3-2019.10-Linux-x86_64.sh 
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/anaconda_install.PNG)
 
-# 11. Now to start the jupyter server enter the below 2 commands:
+
+# 11. Now to start the jupyter server enter the below 3 commands:
+
     1. source .bashrc
-    2. jupyter notebook --no-browser
+    2. pip install jupyter
+    3. jupyter notebook --no-browser
     
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/jupyter_start.PNG)
 
-# 12. Go to http://localhost:8000/ to get into the jupyter environment and create your notebooks.
+
+# 12. Go to http://localhost:8000/ to get into the jupyter environment and create your notebooks. Refer https://www.youtube.com/watch?v=CR00meDBrPI if local host is not loading.
+
 
 # 13. Now the fun stuff. After all that hard work, the next time you wanna start a server I will give you two lines of codes to achieve it. It will start a server and launch a jupyter notebook.
+
 
 # 14. Open up your command prompt and type the code:   python ec2_start.py  (This command assumes that you have the .pem file stored in working directory)
 
@@ -74,6 +86,7 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 
 
 # Conclusion
+
 Always remember to stop your EC2 servers to avoid accumulating charges. You can always check how much it is going to cost for different isntances over here: https://aws.amazon.com/ec2/pricing/on-demand/
 
 So once you stop you EC2 instances, you wont be charged anymore but the EBS volumes that are attached to the EC2 instance still persist unless you manually delete them or checked 'Delete on Termination' when creating EC2 instance. But honestly EBS volumes are dirt cheap which start at $0.10 per GB-month of provisioned storage for General Purpose SSD (gp2) Volumes. That means even if you use 2 EBS volumes with 30 GB storage each running for 100 hours in month its going to cost just $0.8 USD. For calculations and pricing of EBS volumes refer here: https://aws.amazon.com/ebs/pricing/
