@@ -58,9 +58,9 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 
 12. Go to http://localhost:8000/ to get into the jupyter environment and create your notebooks.
 
-13. Now the fun stuff. After all that hard work, the next time you wanna start a server you dont need to do all the above. You just need two codes of line to get your notebook up and running. 
+13. Now the fun stuff. After all that hard work, the next time you wanna start a server I will give you two lines of codes to achieve it. It will start a server and launch a jupyter notebook.
 
-14. Open up your command prompt and type the code:   python ec2_start.py
+14. Open up your command prompt and type the code:   python ec2_start.py  (This command assumes that you have the .pem file stored in working directory)
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/jupyter_cmd.PNG)
 
@@ -71,6 +71,9 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 16. To stop the server all you need to do is run the command: python ec2_stop.py
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/server_stop.PNG)
+
+
+Conclusion
 
 
 
