@@ -4,11 +4,12 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 
 # Pre-requisites:
 1. AWS Account
-2. Python environment
+2. Python environment (Download python 3.8.1 from www.python.org)
 3. Key-Pair file
 4. EC2 server
-
+ have to add pip install boto3 and pip install awscli / aws config/access keys
 # Instructions:
+
 # 1. Download ec2_start.py and ec2_stop.py files and save to working directory of your local command line. For example, mine is C:\Users\Vijay.
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/Command_prompt.PNG)
