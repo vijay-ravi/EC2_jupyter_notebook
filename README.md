@@ -4,12 +4,11 @@ Start a jupyter notebook on EC2 server to speed up machine learning.
 
 # Pre-requisites:
 1. AWS Account
-2. Python environment (Download python 3.7.4 from www.python.org)
+2. Python environment (Download python from www.python.org)
 3. Key-Pair file
 4. EC2 server
 
-<b>Note: If you havent set up your AWS account or installed boto3 and awscli please refer to the article on my website: www.vijayravi.blog
- have to add pip install boto3 and pip install awscli / aws config/access key
+<b>Note: If you havent set up your AWS account or installed boto3 and awscli please refer to the article on my website: https://vijayravi.blog/blog
 
 # 1. Download ec2_start.py and ec2_stop.py files and save to working directory of your local command line. For example, mine is C:\Users\Vijay.
 
@@ -72,9 +71,8 @@ Refer https://repo.anaconda.com/archive and https://repo.anaconda.com/miniconda 
 # 12. Go to http://localhost:8000/ to get into the jupyter environment and create your notebooks. Refer https://www.youtube.com/watch?v=CR00meDBrPI if local host is not loading.
 
 
-# 13. Now the fun stuff. After all that hard work, the next time you wanna start a server I will give you two lines of codes to achieve it. It will start a server and launch a jupyter notebook.
+# 13. Now the fun stuff. After all that hard work, you definitely don't want to all that all again. So I will give you one line of code to start or stop your EC2 servers.
 
-# 15
 # 14. Open up your command prompt and type the code:   python ec2_start.py  (This command assumes that you have the .pem file stored in working directory)
 
 ![Image description](https://github.com/vijay-ravi/EC2_jupyter_notebook/blob/master/jupyter_cmd.PNG)
@@ -95,9 +93,6 @@ Always remember to stop your EC2 servers to avoid accumulating charges. You can 
 So once you stop you EC2 instances, you wont be charged anymore but the EBS volumes that are attached to the EC2 instance still persist unless you manually delete them or checked 'Delete on Termination' when creating EC2 instance. But honestly EBS volumes are dirt cheap which start at $0.10 per GB-month of provisioned storage for General Purpose SSD (gp2) Volumes. That means even if you use 2 EBS volumes with 30 GB storage each running for 100 hours in month its going to cost just $0.8 USD. For calculations and pricing of EBS volumes refer here: https://aws.amazon.com/ebs/pricing/
 
 The reason for keeping the EBS volumes is to avoid installing the anaconda environment all over on the new volume. But if you still wanna get rid of EBS volume and look for a cheaper alternative what you’ll want to do is create an AMI from your instance. Then you can even delete your instances, but still have all the work and files you created saved for future use. AMIs can also be saved in S3 for much less money by following these steps : http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-instance-store.html
-
-But creating an AMI and launching an EC2 instance takes additional steps and the .py files dont contain the code for it.
-
 
 
 
