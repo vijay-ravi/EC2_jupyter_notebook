@@ -71,7 +71,8 @@ Refer https://repo.anaconda.com/archive and https://repo.anaconda.com/miniconda 
 # 12. Go to http://localhost:8000/ to get into the jupyter environment and create your notebooks. Refer https://www.youtube.com/watch?v=CR00meDBrPI if local host is not loading.
 
 
-# 13. Now the fun stuff. After all that hard work, you definitely don't want to all that all again. So I will give you one line of code to start or stop your EC2 servers.
+# 13. Now the fun stuff. After all that hard work, you definitely don't want to all that all again. The .py files that you have donwloaded will start or stop your EC2 servers as you execute just 1 line of code
+
 
 # 14. Open up your command prompt and type the code:   python ec2_start.py  (This command assumes that you have the .pem file stored in working directory)
 
